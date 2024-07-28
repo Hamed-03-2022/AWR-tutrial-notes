@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.28)  28 JUL 2024 16:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.28)  28 JUL 2024 16:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -502,14 +502,7 @@ Package caption Info: New subtype `subtable' on input line 238.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 39.
  (C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (AWR tutrial.aux
-
-LaTeX Warning: Label `fig:Polarization' multiply defined.
-
-
-LaTeX Warning: Label `fig:Polarization@cref' multiply defined.
-
-)
+) (AWR tutrial.aux)
 \openout1 = `"AWR tutrial.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -664,61 +657,35 @@ Overfull \hbox (6.263pt too wide) in paragraph at lines 101--102
 
 [3{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
 
-LaTeX Warning: File `polarization.png' not found on input line 158.
+LaTeX Warning: File `polarization.png' not found on input line 159.
 
 
-f:/Latex work/AWR/AWR tutrial.tex:158: Package pdftex.def Error: File `polarization.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 ...phics[width=\textwidth]{polarization.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Citation `polarization' on page 4 undefined on input line 159.
-
-
-LaTeX Warning: Citation `polarization' on page 4 undefined on input line 159.
-
-
-LaTeX Warning: File `polarization.png' not found on input line 165.
-
-
-f:/Latex work/AWR/AWR tutrial.tex:165: Package pdftex.def Error: File `polarization.png' not found: using draft setting.
+f:/Latex work/AWR/AWR tutrial.tex:159: Package pdftex.def Error: File `polarization.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.165 ...phics[width=\textwidth]{polarization.png}
+l.159 ...phics[width=\textwidth]{polarization.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: Citation `polarization' on page 4 undefined on input line 166.
+LaTeX Warning: Citation `polarization' on page 4 undefined on input line 160.
 
 
-LaTeX Warning: Citation `polarization' on page 4 undefined on input line 166.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `polarization' on page 4 undefined on input line 160.
 
 
 
 [4]
 
-[5]
-
-LaTeX Warning: Reference `fig:sample images' on page 1 undefined on input line 183.
+LaTeX Warning: Reference `fig:sample images' on page 1 undefined on input line 177.
 
 
 
-[6{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+[5{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
 No file "AWR tutrial".bbl.
 (AWR tutrial.aux
 Package cleveref Info: loaded `english' language definitions on input line 7.
@@ -732,24 +699,21 @@ L3 programming layer <2024-05-27>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `"AWR tutrial".out' has not changed.
 (rerunfilecheck)             Checksum: C5E4F946CB0C7B1CAA9362F28412C39D;774.
  ) 
 Here is how much of TeX's memory you used:
- 21258 strings out of 473904
- 414150 string characters out of 5736415
+ 21256 strings out of 473904
+ 414128 string characters out of 5736415
  1937908 words of memory out of 5000000
  43848 multiletter control sequences out of 15000+600000
  607123 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,9n,82p,885b,986s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "AWR tutrial.pdf" (7 pages, 260357 bytes).
+Output written on "AWR tutrial.pdf" (6 pages, 259096 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 132 PDF objects out of 1000 (max. 8388607)
+ 15 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
