@@ -1,7 +1,9 @@
 \babel@toc {english}{}\relax 
-\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Videos}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Design Troubleshooting for Stability Part 1}{1}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Technical Note from the CEL Blog}{3}{section.3}%
-\contentsline {section}{\numberline {4}Conclusion}{5}{section.4}%
+\contentsline {section}{\numberline {4}From github (https://github.com/aliruveycan/Maximum-Earnings-using-AWR-Microwave-Office-Amplifier-Design-and-Simulation.git)}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Key Paper 1}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Key Paper 2}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Conclusion}{4}{section.5}%

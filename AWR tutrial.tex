@@ -1,68 +1,37 @@
-
-
-\documentclass[english]{article}
+% study_notes.tex
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
-
-
-\setlength\parindent{0pt}
-\usepackage{siunitx}
-\sisetup{locale = UK}
-\usepackage[separate-uncertainty=true]{siunitx}
-
-\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{cite}
+% Basic packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[english]{babel}
 \usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage{amssymb}
+
 \usepackage{color}
-\usepackage{geometry}
-\usepackage{multirow}
-\usepackage{comment}
-\usepackage[version=4]{mhchem}
-
 \usepackage{graphicx}
-
-\usepackage{fancyhdr}           % für Kopf- und Fuß-Zeilen
-\usepackage{listings}           % für Quelltexte
-\usepackage[unicode,breaklinks]{hyperref}
-\usepackage{cleveref}
 \usepackage{subcaption}
 
 
+\geometry{a4paper, margin=1in}
 
-
-% Kopf-Zeile
-% ==========
+\title{Study Notes for AWR Tutorial}
+\author{Your Name}
+\date{\today}
 
 \begin{document}
-\selectlanguage{english}
 
-\begin{titlepage}
-	\centering
-	{\scshape\LARGE Report on \par}
-	\vspace{1cm}
-	{\scshape\huge AWR tutorial from different sources \par}
-	\vspace{2.5cm}
-	{\LARGE Group 23-2\par}
-	\vspace{0.5cm}
-	{\large Hamed Ragab Hassanein  \par}
+\maketitle
 
-
-
-	\vfill
- excecuted \\
- July 28, 2024
- \vfill
-
-	{\large \today \par}
-\end{titlepage}
-
+\begin{abstract}
+These are study notes for the Advanced Writing and Research (AWR) tutorial.
+\end{abstract}
 
 \tableofcontents
-
-
 
 \section{Introduction}
 This is an introductory tutorial to use AWR from the Roland device.
@@ -75,7 +44,7 @@ Instability arises from the use of feedback and gain together. This can be contr
 \textbf{From AWR DE Tutorial 5}
 \begin{itemize}
     \item After selecting the new schematic, name it and then press \texttt{Ctrl + L} to add elements.
-    \item To see the details of a component, right-click and select \texttt{Help}.
+    \item To see the details of a component, right-click and select \texttt{Help}.\cite{paper_2}
     \item You can add equations as in QUCS and use the factors in the component details.
     \item To tune an item or a factor on the graph, click the \texttt{Tune} tool above and then click on the factor; it will change to a blue color.
     \item Set the limit of the chosen factor and then click the tuner. It is behind the identifier tool that chose the factor to tune. You will see the variable tuner has limits and then you can change it above and below.
@@ -132,7 +101,15 @@ The CE3512K2 is an air cavity package structure which is effective in reducing R
 \textbf{Transmission Line Matching}
 The quarter wavelength (\( \lambda /4 \)) transmission line is a crucial element in RF design.
 the (\(\lambda/4 \)) can replace he inductor on rf isolation. and for this technique there is no frequency limit.
-Radial and rectangle open stub are the most common Tlines on rf 
+Radial and rectangle open stub are the most common Tlines on rf.
+
+
+\section{From github (https://github.com/aliruveycan/Maximum-Earnings-using-AWR-Microwave-Office-Amplifier-Design-and-Simulation.git)}
+
+to simulate the  transistor on the data files upload the s parameter file 
+and on the graphs plot all S parameters graphs.
+
+then you can match with the Tlines  length as on the AWR 1 hour tutorial for Matching 
 
 
 
@@ -163,31 +140,37 @@ Radial and rectangle open stub are the most common Tlines on rf
 
 
 
-\begin{equation}
-    \Vec{D}=\epsilon_0 \Vec{E} + \Vec{P} := \epsilon_0 \epsilon \Vec{E}
-\end{equation}
-
-With the dielectric function $\epsilon$, which describes the response of the material to external e.m. fields. $\epsilon=\epsilon_1 +i \epsilon_2$ is a complex function, which will in general depend strongly on the frequency of $\Vec{E}$ and also on the direction, if the material is anisotropic. The sometimes more intuitive complex refractive index $\Tilde{n}$ can be gained from $\epsilon$ through:
+With the dielectric function $\epsilon$, which describes the response of the material to external electromagnetic fields. $\epsilon = \epsilon_1 + i \epsilon_2$ is a complex function, which will in general depend strongly on the frequency of $\Vec{E}$ and also on the direction, if the material is anisotropic. The sometimes more intuitive complex refractive index $\Tilde{n}$ can be gained from $\epsilon$ through \cite{paper_2}:
 
 \begin{equation}
-    \sqrt{\epsilon}= \Tilde{n}= n+ i\kappa
+    \sqrt{\epsilon} = \Tilde{n} = n + i\kappa
 \end{equation}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Key Paper 1}
+Discuss the first key paper. \cite{author2021paper}
+
+\subsection{Key Paper 2}
+Discuss the second key paper. \cite{author2022paper}
 
 
 
 \section{Conclusion}
+Summarize the key points discussed in the tutorial and their implications.
 
-
-
-\newpage
-
-\bibliographystyle{unsrt}
-\bibliography{refs}
-
-
-\appendix
-
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}

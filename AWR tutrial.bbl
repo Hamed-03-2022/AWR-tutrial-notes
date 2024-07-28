@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{author2021paper}
+A.~Author.
+\newblock Title of the key paper 1.
+\newblock {\em Journal Name}, 10(2):123--456, 2021.
+
+\bibitem{author2022paper}
+B.~Author.
+\newblock Title of the key paper 2.
+\newblock {\em Journal Name}, 11(3):789--1011, 2022.
+
+\end{thebibliography}
