@@ -1,0 +1,196 @@
+
+
+\documentclass[english]{article}
+\documentclass{article}
+\usepackage{amsmath}
+
+
+\setlength\parindent{0pt}
+\usepackage{siunitx}
+\sisetup{locale = UK}
+\usepackage[separate-uncertainty=true]{siunitx}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage[version=4]{mhchem}
+
+\usepackage{graphicx}
+
+\usepackage{fancyhdr}           % für Kopf- und Fuß-Zeilen
+\usepackage{listings}           % für Quelltexte
+\usepackage[unicode,breaklinks]{hyperref}
+\usepackage{cleveref}
+\usepackage{subcaption}
+
+
+
+
+% Kopf-Zeile
+% ==========
+
+\begin{document}
+\selectlanguage{english}
+
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Report on \par}
+	\vspace{1cm}
+	{\scshape\huge AWR tutorial from different sources \par}
+	\vspace{2.5cm}
+	{\LARGE Group 23-2\par}
+	\vspace{0.5cm}
+	{\large Hamed Ragab Hassanein  \par}
+
+
+
+	\vfill
+ excecuted \\
+ July 28, 2024
+ \vfill
+
+	{\large \today \par}
+\end{titlepage}
+
+
+\tableofcontents
+
+
+
+\section{Introduction}
+This is an introductory tutorial to use AWR from the Roland device.
+
+\section{Videos}
+
+\subsection{Design Troubleshooting for Stability Part 1}
+Instability arises from the use of feedback and gain together. This can be controlled by adding loss or adjusting bypassing in the lab to stabilize the circuit.
+
+\textbf{From AWR DE Tutorial 5}
+\begin{itemize}
+    \item After selecting the new schematic, name it and then press \texttt{Ctrl + L} to add elements.
+    \item To see the details of a component, right-click and select \texttt{Help}.
+    \item You can add equations as in QUCS and use the factors in the component details.
+    \item To tune an item or a factor on the graph, click the \texttt{Tune} tool above and then click on the factor; it will change to a blue color.
+    \item Set the limit of the chosen factor and then click the tuner. It is behind the identifier tool that chose the factor to tune. You will see the variable tuner has limits and then you can change it above and below.
+    \item To plot the output voltage (\( V_{out} \)), you need a voltmeter. Connect it in shunt with the load resistor \( R \) chosen from the element menu.
+    \item To measure the DC characteristics of the amplifier (\( V_{out} \) vs \( V_{in} \)), you need a linear graph. Add a new measurement, select \texttt{Nonlinear} and then \texttt{Voltage}. Choose \( V_{DC} \) on the measurement component and place the voltmeter on the vertical axis. For the x-axis, use the voltage from the source.
+    \item Click \texttt{Apply} and then choose the simulation tool on the schematic.
+\end{itemize}
+
+\textbf{From AWR DE Tutorial 6}
+\begin{itemize}
+    \item From the elements menu, you can also find the voltage source (V source). If it is AC, to measure it you will need a voltmeter similar to the one used on the load resistor.
+    \item The working frequency is a global value defined for the overall project from the project options menu. Define the frequency range and then from the global units icon above, choose the frequency and change its unit to kHz in this case.
+    \item The netlist file that can be imported into AWR has the extension \texttt{.cir}. From the netlist menu, select \texttt{Netlists} and then choose \texttt{Import Netlist}.
+    \item With \texttt{Ctrl + K}, you can add the important netlist.
+    \item After adding the symbols, you can change them from square and normal device shapes from \texttt{Properties > Symbols}, then choose the needed shape.
+    \item To add the voltage source, add \texttt{DCVS} and \texttt{ACVS} from the elements.
+\end{itemize}
+
+\textbf{From AWR DE Tutorial 7}
+\begin{itemize}
+    \item The models that can be used in AWR are the PSpice models with \texttt{.cir} extension.
+    \item These are called AWR netlist files.
+    \item From \texttt{Steer 03.Wideband Amplifier Design Using the Negative Image Model, Part F}, we can see that the model used with the transistor is added in the data files above the graphs.
+\end{itemize}
+
+\textbf{From Impedance Matching AWR}
+\begin{itemize}
+    \item From project options, you can change many of the item units.
+    \item You can use the cookbook for ADS and check the LNA simulation part and try to replicate it in AWR.
+    \item To measure the input impedance, it is a linear measure, and you can find it on the graph after adding a new measure. Choose \( Z_{in} \).
+    \item Define \( Z_{in} \) unit, the port number, and the source name. If there is a transmission line after the input port, it will appear.
+    \item It is important to sweep the frequency and define the number of points for measurement to determine at which frequencies the device should read a measurement. This can be done from the project options window.
+    \item To add another plot on the graph, click \texttt{Duplicate Measurement} and then from the window called \texttt{Modify Measurement}, you can add the changes between the two lines.
+    \item For the 50-ohm resistor, if you change the \( Z_{in} \) measure from 75 ohms with the transmission line to 50 ohms, you will see matching at 50 ohms for \( Z_{in} \) real and the imaginary value is zero, indicating matching.
+    \item In the case of 75 ohms with a 50-ohm transmission line, you will see the imaginary part increase with frequency from -20 to +20. If the imaginary part is greater than 0, it means positive reactance, indicating inductance, and negative reactance means it is capacitive.
+    \item If you remove the resistor and use just the transmission line and simulate, you will see the real and imaginary parts are 0 ohms at 2.4 GHz if the transmission line is open, not grounded. If grounded, there will be a very large \( Z_{in} \) at 2.4 GHz.
+    \item In the matching case, measure the impedance on the Smith chart and check where the point is for your frequency. Connect a series capacitor and a parallel inductor if the point on the Smith chart is on the capacitive part under the middle line. Then tune the values of C and L and check which one has a larger effect on the point. Tune it to get the point above on the inductive part, then with the capacitor value change it to reach the middle line indicating the point is totally matched.
+    \item After adding a microstrip line with T-line used as a load, it should be matched when the length and the width give a 50-ohm for the material used on the substrate. In this case, the microstrip line and the T-line are 50-ohm, meaning they should be matched around the frequency of the T-line, which is 2.4 GHz. Matching can be seen from the impedance linear graph or from the Smith chart.
+    \item If you have just one port, you will measure on Smith just \( S_{11} \). When measuring, it is a must to use the MSUB on the schematic to define the substrate for the transmission line. The values of the variables on the MSUB are taken from the window where we define the width and the length on the MSline, meaning \( \epsilon_r \) and tan \( \delta \) and so on.
+    \item When matching with MSline, define the length and then you can add a parallel one in front of the MSline and define the length and tune it to get the matched point. Adding the admittance might help on Smith to get a line to move with it. On the new line, you can play with the width and the length.
+    \item The microstrip TEE or MTEE is used to connect the MS lines instead of connecting them together, which might lead to parasitic capacitance. So the idea is to make the design and see the Smith chart and match with the MS lines, and then control the length and width of the MS lines to get the matched point. Then connect them with the MTEE with a dollar sign which will connect the three sides with the equivalent width for the line.
+    \item If an MS line is not grounded, you need to connect the Mopen line, which is an MS line with open termination.
+    \item To see the length of the MS lines, you can see the layout graph and then import the other component models that define the layout. AWR requires some experience because it does not always have the best documentation.
+\end{itemize}
+
+\textbf{Microstrip Antenna AWR Lab Video}
+\begin{itemize} 
+    \item This video is important for working with T-lines.
+\end{itemize}
+
+\section{Technical Note from the CEL Blog}
+The CE3512K2 is an air cavity package structure which is effective in reducing RF power loss consumed by the packaging material. For HEMT, the gate has high impedance at DC, so there is only a need for bias at the drain and connecting \( V_g \) directly. The bias at the drain is sufficient to use just the inductor, and it should be high enough to provide good RF isolation at the operating frequency. The inductor can also be part of the matching network. A shunt capacitor provides a low impedance point, creating a low pass filter for noise and unwanted signals from the DC source. As frequency increases, parasitic effects become dominant, necessitating transmission line-based components in both bias and matching circuits.
+
+\textbf{Transmission Line Matching}
+The quarter wavelength (\( \lambda /4 \)) transmission line is a crucial element in RF design.
+the (\(\lambda/4 \)) can replace he inductor on rf isolation. and for this technique there is no frequency limit.
+Radial and rectangle open stub are the most common Tlines on rf 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{polarization.png}
+    \caption{Different states of polarization. a) linear polarization. c) Circular polarisation. b) The more general elliptical polarization. Taken from \cite{polarization} }
+    \label{fig:Polarization}
+\end{figure}
+
+
+
+
+\begin{equation}
+    \Vec{D}=\epsilon_0 \Vec{E} + \Vec{P} := \epsilon_0 \epsilon \Vec{E}
+\end{equation}
+
+With the dielectric function $\epsilon$, which describes the response of the material to external e.m. fields. $\epsilon=\epsilon_1 +i \epsilon_2$ is a complex function, which will in general depend strongly on the frequency of $\Vec{E}$ and also on the direction, if the material is anisotropic. The sometimes more intuitive complex refractive index $\Tilde{n}$ can be gained from $\epsilon$ through:
+
+\begin{equation}
+    \sqrt{\epsilon}= \Tilde{n}= n+ i\kappa
+\end{equation}
+
+
+An exfoliated \ce{MoS2} fewlayer flake was deposited on about \SI{80}{nm} of \ce{SiO2} grown by thermal oxidation on a substrate of \ce{Si}. This sample was first transferred onto a sample carrier which could be precisely moved and turned inside the setup. The alignment of the sample carrier was then calibrated, using a laser reflected on the sample surface. The nulling condition of the ellipsometrie was averaged over zones with a similar sample thickness. The sample and the chosen zones are shown in  \cref{fig:sample images}. The measurement was then performed for two different thicknesses of \ce{MoS2}. Additional a measurement of the \ce{SiO2} substrate was taken, to understand the effect of the substrate.
+
+
+\section{Conclusion}
+
+In this experiment the optical coefficients of a \ce{MoS2} trilayer were examined using the nulling ellipsometry method. By fitting a multilayer model of the optical coefficents to the data, the complex refractive index could be extracted from the measurements. In there, the effects of the A-, B- and C- excitons were fitted as Lorentz-oscillators at the energies $1.897 \pm 0.002$ eV, $2.066 \pm 0.003$ eV and $2.805 \pm 0.006$ eV, these correspond well to literature values. Another strong Lorentz peak was fitted at $3.678 \pm 0.717$ eV, to receive a good fit to the data, although these high energies were not recorded anymore inside this experiment. This indicates another strong transition in \ce{MoS2} at those energies. This could be examined further in another experiment involving these higher energies.\\
+The thickness of the sample calculated by the fit was \SI{1.7 \pm 0.2}{nm}, which is in a reasonable range for a \ce{MoS2} trilayer.\\
+Additionally, the absorbance of the sample was calculated from the modeled data. Qualitative the evaluated absorbance corresponds well to previous experiments. However, there is a bit more then a factor of 3 between the absorbance calculated here and previous experiments. Due to the complexity of the data analysis in this experiment, it is hard to say, where precisely this factor is coming from. A step by step comparison with data from different experiments would be necessary, to find out, where the factor is coming from.
+
+
+\newpage
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+
+\appendix
+
+
+\end{document}
