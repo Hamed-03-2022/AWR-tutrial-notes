@@ -102,6 +102,38 @@ The CE3512K2 is an air cavity package structure which is effective in reducing R
 The quarter wavelength (\( \lambda /4 \)) transmission line is a crucial element in RF design.
 the (\(\lambda/4 \)) can replace he inductor on rf isolation. and for this technique there is no frequency limit.
 Radial and rectangle open stub are the most common Tlines on rf.
+thr coupling capacitors has to undesirable effects it has high insertion loss as a fraction of dB directly degrades the
+noise figure by the same amount and the matching network is become complicated due to the parasitic effect of the high 
+frequency capacitors.
+
+output series capacitor has negatable impact on the circuit performance 
+
+you will need bias tee if you you wanna exclude using the input capacitors to prevent dc coupling with the instrument during the measurement.
+this only on noise figure measurement. 
+
+Tlines component on the matching network usually used on the cas for the freq higher than  10Ghz
+
+Ampleon is a good company for rf transistor with application note and references.
+as stated on the website  edaboard.com   after you have the transistor model you can chose a bias point then stability analysis 
+with Rollet factor then design the input and output matching. also the power transistor has optimum load impedance
+that maximize the delivered power or the gain.
+
+one simple measurement is to make representation for the S param and then compare between QUCS and AWR 
+
+
+ \textbf for Simulation 
+
+ add S2p on the data files by import then add it on the schematic as rectangle then click and from Properties change the symbol.
+ then follow the circuit stubs as on the Matching with the AWR video.
+ the bias circuit is to design the bias point and the matching to work on  50ohm 
+ on HEMT  transistor has highrt breakdown voltage and high operational temp.
+$
+\Gamma (S) = \Gamma (opt) $  must be first for LNA
+connect the bias circuit and define the bias voltaged and calculate Rg and Rd and the capacitor and the inductors
+
+
+
+
 
 
 \section{From github (https://github.com/aliruveycan/Maximum-Earnings-using-AWR-Microwave-Office-Amplifier-Design-and-Simulation.git)}
@@ -109,7 +141,7 @@ Radial and rectangle open stub are the most common Tlines on rf.
 to simulate the  transistor on the data files upload the s parameter file 
 and on the graphs plot all S parameters graphs.
 
-then you can match with the Tlines  length as on the AWR 1 hour tutorial for Matching 
+then you can match with the Tlines  length as on the AWR 1 hour tutorial for Matching.
 
 
 
@@ -118,6 +150,107 @@ then you can match with the Tlines  length as on the AWR 1 hour tutorial for Mat
 
 
 
+\section{Diffrent pdf notes from google Image}
+\textbf{From Ultra wid band amp by chengcheng Xu}
+Rf amplifier is used to amplify small signal amplitude to a large amplitude  in transmission and receive signal from antennas.
+
+
+if the BW from 1.5 to 3.5  Ghz it means that  the amplifier can  be called 2 GHz amp so our amplifer can be called 
+1GHz  or 800 MHz  or 600MHz   amplifer for the SNSPDs 
+
+
+ Not understood   phrase is the final gain is 20 dB with the power gain slightly below 30 dBm.
+
+ if the transistor IV curve is mostly linear then the output signal gain will be linear otherwise gain will be non linear.
+
+ Class A amplifier has poor efficiency when converting the dc power to high freq output power 
+ the lost power will br converted to heat on the device this power that is not converted to rf power 
+but it provide great output to input linearity 
+#
+
+Class B more efficient than A but it scarifies the output linearity to  input signal ratio. lead to distortion on the output
+signal half of the signal only amplified 
+
+push pull configuration with two transistor may solve the class B amplifier issue.
+
+if the spice model is not provided so the setup a bias network is not important you will use on the s2p file form the 
+provider then you need to match the output of the transistor to the output matching circuit 
+also consider the stability of the amplifier if it is conditional on unconditional stable.
+
+the S22 matching with the output matching network is created first than the inpupt matching network 
+
+if S11 is not matched all the input power will not be deliver to the amplifier 
+
+the biasing circuit or bias point use one that is recommended from the the provider bias points means the points for the 
+s2p files that provided Vds and Vgs and Id  
+
+chose the bias point that has gain near to your interested freq on the thesis they use s2p at 3v 60 mA bias this can be show from the graph for 
+MSG/MAG and S21 dB  you see that S21 has gain at the needed frequency.
+
+
+this bias point also avilable on the AWR software so no need to import the file on the Microwave office software 
+
+
+P1dB  compression point is also important  as the transistor it self is not linear so the output / input ratio can't be linear
+ 
+it is defined as the point where the device output power and the linear model output different
+by 1dB.
+
+this point where the device also start to provide Nonlinear behavior so you look at the p1dB point on the data sheet 
+
+if you wanna use another transistor you should follow the same process.
+
+the FPD2250 has 1dB point 31dBm  and if the gain is 10dB  so the max power input to the transistor
+is 21dBm so you need to see the conversion of the power values to dBm and check the P1dB effect. the 21dBm will be 
+above the output of the 1 st stage.
+
+the stability is not related to which gain value of BW is the device it self is unstable  this will not has an effect
+on what gain or other parameter so we need to use stable network to prevent oscillating output
+
+
+the stability on Microwave office is tested by K() and B1 parameter and also by SCIR1() and SCIR2() parameters of the device
+
+K>1 and B not < 0 
+
+SCRR 1 will create solid line  and dashed lines circles the inside or out side the l´solid line circle 
+
+the  solid circle will be the stable one. the goal is to be inside the stable region 
+
+\textbf{ Design steps}
+\begin{itemize}
+    \item add the transistor model and change it to symbol or leave it as it is.
+    \item check also if it is avilable on AWR or not at the beaning
+    \item design a bias point circuit should be stable or should be called stability circuit. ther is no voltage sources as on fig on the tutorial just Rd and Rout and Rg and the two ports also you  might need to use MSline and control it's length tune the component then see the stability for K and B values.
+    \item the above  step is  reoeated for the two the stages on thier own.
+    \item this stability test can be done on smith plot with the circles need te studied alone.
+\end{itemize}
+
+\textbf{Wideband Matching}
+\begin{itemize}
+    \item the goal is to has a Wideband at the first gain is not important at this point as the BW.
+    \item so Gmax is not needed now check table one on the tutorial pdf
+    \item matching method are Chebyshev matching  and lumped elements matching
+    \item Chebyshev matching is based on Chebyshev polynomial and the matching network is mostly consist of quarter wave transformer
+    and from the BW and quarter wave transformer section number the impedance of each quarter wave transistor is generated
+    Chebyshev Matching is on figure 12
+    \item  then you need to see the matching on smith see S11 and S22 it should be nearly perfect match 
+    means it is circulated around the center point smith plot.
+    \item  as shown on figure 12 Chebyshev has 6 Tline for each S11 and S22 and the and the length of the quarter wave transistor
+    need to be quarter of the signal wavelength. so the reault now for Rf application is not realestic and the
+    and the design will be very large and amplifier detentions will be large
+    \item so the Chebyshev matching is not implemented  here.
+\end{itemize}
+
+
+
+\textbf{lumped element match}
+\begin{itemize}
+    \item 
+\end{itemize}
+
+
+\textbf{Final Design}
+\
 
 
 
@@ -126,17 +259,6 @@ then you can match with the Tlines  length as on the AWR 1 hour tutorial for Mat
 
 
 
-
-
-
-
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=\textwidth]{polarization.png}
-    \caption{Different states of polarization. a) linear polarization. c) Circular polarisation. b) The more general elliptical polarization. Taken from \cite{polarization} }
-    \label{fig:Polarization}
-\end{figure}
 
 
 
