@@ -249,6 +249,76 @@ the  solid circle will be the stable one. the goal is to be inside the stable re
 \end{itemize}
 
 
+\section{matching}
+
+on smith for any point to match it move with circle until you get a point on a circle that pass by the smith center 
+which is 50 ohm matched.
+
+on impedance smith series R go go right toward the center line 
+series C goes down
+series L goes up
+
+
+on the admittance plane the shunt R,L,C  goes the same L up 
+C down but R left.
+
+\textbf{on Lec 7 impedance match with smith video is very nice}
+
+if $$z_o = 50 ohm and Z_s = 50 ohm so Z_i the normalized impedance is 1 means full matched$$
+$Z_i$ which is represented on smith chart 
+
+adding resistor will add loss to your design so using L and C is is enough and better.
+impedance match with the Tlines is very diffcult compared to Lumped element but the idea is the 
+same there is numerating on smith for the matching lines.
+bit the middle line for the real is the same but the imagnary numbers are written now interms of \Lambda.
+
+
+
+
+\textbf{Txline  feature from AER Videos}
+
+from tools chose txline it is used to know how much width should the line be to be $50 ohm$
+or how length should be to 90 deg at 80 Ghz for example
+on the txline window change to mm on length and width 
+using the arrow on the middle to change between the calcuation then use the length and width on thes chematic then simulate to see 
+the smith chart  you will see the point is on the middle if smitt
+
+
+\textbf{Sweep feature}
+on the parameter you want sweep click right then chose sweep  define a start and end and steps.
+ and define also by equation a value to initialize the variable.
+\textbf{Reflection coefficient measurement}
+from the graph and S11 measure but at the beginning you have to add measure port at the input 
+all of that is on the polar plot not smith
+then tune the Tline length.
+and see the effect on S11 
+
+if you change the port to harmonic balance port you will be able to see the 
+I V values on this device. time waveforms  of I V.
+on elements it is called port1
+you will see the wave source.after it you need a V meter or I meter 
+from element chose V_meter and also I meter 
+I meter on series after port and v meter on shunt.
+from the graph rectangle then Nonlinear graphs then voltage then vtime.
+
+on plot chose properties then measurement then  chose which graph on left and which on right. side.
+
+on the Tline is length 0  the I V time relation are on phase when change the length the VSWR is the same and the 
+real part of the reflection coefficient is the same  but hte phase deg changes always
+this means the phase difference between IVtime relation will change.
+
+due to the phase changes the Tline is considered as network from inductors series and capacitor parallel
+with the the voltage source.
+
+VSWr is the ration between $$V_max$$ / $$V_min$$
+
+
+
+
+
+\textbf{there are some simulation AWR videos on the Microwave labcast channel}
+
+
 \textbf{Final Design}
 \
 

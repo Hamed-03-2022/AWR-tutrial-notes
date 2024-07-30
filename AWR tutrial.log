@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.27)  29 JUL 2024 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.27)  30 JUL 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -472,9 +472,9 @@ LaTeX Warning: Citation `paper_2' on page 1 undefined on input line 47.
 
 [1
 
-{C:/Users/hhami/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+{C:/Users/hhami/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
-[2]
+[2{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [3{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
 Overfull \hbox (44.88725pt too wide) in paragraph at lines 139--139
@@ -497,14 +497,52 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 
 [4]
+c:/Users/hhami/Desktop/latex/AWR-tutrial-notes/AWR tutrial.tex:273: Missing $ inserted.
+<inserted text> 
+                $
+l.273 ...umbers are written now interms of \Lambda
+                                                  .
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-LaTeX Warning: Citation `paper_2' on page 5 undefined on input line 265.
+c:/Users/hhami/Desktop/latex/AWR-tutrial-notes/AWR tutrial.tex:274: Missing $ inserted.
+<inserted text> 
+                $
+l.274 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-(AWR tutrial.bbl
 
-[5{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}])
 
-[6] (AWR tutrial.aux)
+[5]
+c:/Users/hhami/Desktop/latex/AWR-tutrial-notes/AWR tutrial.tex:300: Missing $ inserted.
+<inserted text> 
+                $
+l.300 from element chose V_
+                           meter and also I meter
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/hhami/Desktop/latex/AWR-tutrial-notes/AWR tutrial.tex:303: Missing $ inserted.
+<inserted text> 
+                $
+l.303 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (292.59883pt too wide) in paragraph at lines 296--303
+\T1/lmr/m/n/10 ter or I me-ter from el-e-ment chose V$[]\OML/lmm/m/it/10 eterandalsoImeterImeteronseriesafterportandvmeteronshunt:fromthegraphrectanglethenNonlineargraphsthenvoltagethenvtime:$ 
+ []
+
+
+LaTeX Warning: Citation `paper_2' on page 6 undefined on input line 335.
+
+(AWR tutrial.bbl)
+
+[6{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (AWR tutrial.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
@@ -514,20 +552,20 @@ L3 programming layer <2024-05-27>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `"AWR tutrial".out' has not changed.
-(rerunfilecheck)             Checksum: 78AA98885C630947A7F78A858A28449B;1923.
+(rerunfilecheck)             Checksum: 33648C2C4981E1C26305BCE7FDBEB436;2007.
  ) 
 Here is how much of TeX's memory you used:
- 12750 strings out of 473903
- 205277 string characters out of 5736394
+ 12752 strings out of 473903
+ 205297 string characters out of 5736394
  1940908 words of memory out of 5000000
- 35407 multiletter control sequences out of 15000+600000
+ 35408 multiletter control sequences out of 15000+600000
  612577 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,815b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,815b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "AWR tutrial.pdf" (6 pages, 311815 bytes).
+Output written on "AWR tutrial.pdf" (6 pages, 319840 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
