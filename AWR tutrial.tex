@@ -319,10 +319,43 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
 \textbf{there are some simulation AWR videos on the Microwave labcast channel}
 
 
-\textbf{Final Design}
-\
+\textbf{Simulation} 
+\begin{itemize}
+    
+    \item import the sparmeter and make graph for the device at the beganing before anything.
+    \item then you can make your graph from the graph tool
+    \item first stabilize your circuit connet in out series R and shunt R at the out this will leads to uncoditional stability.
+    \item then you can check that by the by K measure or SCIR1 ans SCIR2 for stability circle.
+    \item now need to match over the wide band this is most important than getting gain. so BW is the important now
+    \item the Match step is the most difficult this can be by the TLines and the lumped elements 
+    \item most popular on AWR the Tline method from the Txline tool you can characterize your Tline properties.
+    \item Match output before the input it is easy and important for the gain means match s22 of the transistor with the output load or matching.
+    \item then Match the input S11 for the transistor with the input circuit to be sure that the power will be deceived to the transistor otherwise it will not.
+    \item now Design  input match and output match sepertly and check them on smith the trick here is to make the whore freq range around the match point middle of smith
+    \item and define only the operating or project frequencies on fron Dc to 1 ghz and define for th txline frequencies the middle point 500 MHz or less it means to make the Wideband match you need to match around the middle frequency.
+    \item after you make the matching circuits make blocks and connect them to the in and out of the transistor 
+    \item then check the gain now.
+    \item then change the port to source nd simulate the power on the device to see the total power output on this case you will see only the part where the S parametr measured mean the linear region not the whole characterstcis this due to no Nonlinear model avilable for the transistor
+    \item and due to no Nonlinear model the Nonlinearity  mean P1dB and OPI3 points of the device will be read only from the datasheet as mentioned on the pdf tutorial by chengcheng zu.
+    on the Tlines from the txline which is considered to be real Tline insted of the ideal one.
+    you will use the stability T junctions  when connect 3 Diffrent Txlines.
+\end{itemize}
 
 
+\textbf{the matching circuit notes}
+\begin{itemize}
+    \textbf{from AWR mtch tutorial}
+    \item ideal Tline is lossles gives perfect phase delay on a spesific frequency and it like on class
+    \item under transmission lines you will fined phase menu then chose Tlin ans Tloc are on the  same menu. these are uesd for the lossles case.
+    \item For the Tline Z0 is the impedence keep it $50 ohm$  and EL is the  electrical length it not the physical length it is the phase delay in degrees that will apply to the signal F0 is the center frequency is very important with EL .
+    \item to simulate the input impednce on Ohms from the linear curves chose zin and only magnitude then make your graph and measure also  from Port 1
+    \item real Zin is the the ohm value  and the img Zin graph show the reactance whin define the capacitance and the inductance if it is negative or positive. this where the matching starts.
+    \item if you mesure the Zin for the Tline with GNd only it will show at the center freq the a huge value at a single freq whic is define an open circuit due to high impedence value.
+    \item if you wanna control a freq on smith juss chose it as the central freq on the Tlines then dee it is point on smith then move it up and sown based on the admittance and impedance plots .  and using resistors not prefiered as it introduce losses .
+    \item when start match with the lumped elements always start with the L netweork of L and C together and then control it notice the higher the capacitance the lower the impedence as $Z=j/\omega C$ 
+    \item 
+    
+\end{itemize}
 
 
 
