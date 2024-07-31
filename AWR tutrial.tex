@@ -243,10 +243,14 @@ the  solid circle will be the stable one. the goal is to be inside the stable re
 
 
 
+
+
 \textbf{lumped element match}
 \begin{itemize}
     \item 
 \end{itemize}
+
+
 
 
 \section{matching}
@@ -358,6 +362,24 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
 \end{itemize}
 
 
+\textbf{from edaboard}
+\begin{itemize}
+    \item power transistor have optimum load impedance that maximize either the delivered power or the power gian 
+    \item if you connect the the pspice model for thr transistor  you can use the IVVURVE tool to mesure the graph for the transistor.just connect the drain and the gate.
+    \item also you could add the models for lumped elements like C or L and R  you need to import the model on the net files.
+    \textbf{tips}
+    \item you can add series R at the gate to get stable device the output match is enough to use the output capacitor and the bias Ld , Rd with capacitor or without.
+    \item also the gate the bias with Lg and series and parrellel resistor.
+    \item also the matching of the inpupt is the most important mostly done with LC circuits 
+    \item as on the figure 2 sreies L and 2 parrellel C with the coupling capacitor. note the capacitors are infront the inductors.
+    \item also the output match is done on the same way but  it arranged this way series L  parrellel C and then repeated one time.
+    \item on smith you measure S11 and S11* 
+    \item tuners helps alot to find the points on smith.
+    \item search about LTuner tool that show smith chart as like boxing the the matching circuit. it is connect after the ports directly means the capacitor are inside it.#
+    \item also omn this circuit the inductor and the reistor and are in series for the biasing.
+    \item the port impedance musst be conjugate of the optimum load ot sourse impedence
+    \item there are power matching and conjugate matching
+\end{itemize}
 
 
 
