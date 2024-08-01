@@ -415,6 +415,24 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
 \end{itemize} 
 
 
+\textbf{Dc biaing at the end}
+\begin{itemize}
+    \item when you chose a s parameter file it has a  Id and Vds values the bias Vdd is not Vds 
+    \item do  use Rd which will give you the needed Id and use the Vdd to get the nedded Vds 
+    \item using High Rg is nice to don't didturb the measurments for matching.
+    \item use I meter and V meter to meaure these values.
+    \item 
+\end{itemize}
+
+
+
+
+
+
+\textbf{What to do to design}
+\begin{itemize}
+    \item stability ba K and delta  or SCIR_IJ(1,2) and SCIR_IJ(2,1) on smith to be sure that all circles outside the smith means unconditional stable.
+\end{itemize}
 
 With the dielectric function $\epsilon$, which describes the response of the material to external electromagnetic fields. $\epsilon = \epsilon_1 + i \epsilon_2$ is a complex function, which will in general depend strongly on the frequency of $\Vec{E}$ and also on the direction, if the material is anisotropic. The sometimes more intuitive complex refractive index $\Tilde{n}$ can be gained from $\epsilon$ throug \cite{paper_2}:
 
