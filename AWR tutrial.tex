@@ -357,8 +357,20 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
     \item if you mesure the Zin for the Tline with GNd only it will show at the center freq the a huge value at a single freq whic is define an open circuit due to high impedence value.
     \item if you wanna control a freq on smith juss chose it as the central freq on the Tlines then dee it is point on smith then move it up and sown based on the admittance and impedance plots .  and using resistors not prefiered as it introduce losses .
     \item when start match with the lumped elements always start with the L netweork of L and C together and then control it notice the higher the capacitance the lower the impedence as $Z=j/\omega C$ 
-    \item 
-    
+    \item after you match on Zin smith graphs  with complex magnitude aou can make S11 graph and see the value at the matched fewq on dB
+    \item the problem with the idal Tlines is no practical they don't consider the loss or juction connections and lots of parasitics 
+    \item to work real Tline need new schematic. 
+    \item reak -tline rotates around the center point by a spesific amount it not like the LC component 
+    \item after you define the MSl ine based on the txline tool from the date also on txline tool prepare the substrate for your measurement.
+    \item to match add series and parrellel tlines and control the length and the width 
+    \item to simulate a t shape Tlines on the layout to check the design before fabricate 
+    when connecting more than a Tlines together with the the T juction make the width  of the jucction sides and the wisth fo the Tlines constant values and jsut change the length
+     the length need to be not longer that 20 mm to save the diementions of the pcb after fabriaction.
+     the juction is called MTEE and there is another one called  $MTEE\$$ this define the widthes automtically if you have Diffrent width Tlines.
+    \item  for the open side Tline  use Mopen lien to close the Tline side.
+    \item  there is a tool called snap together on the above line just mark all tlines on the layout and press it then everything will be connected automaticaly .  the tool beside the tuner tool.
+    \item if you wanna solve for everything on 3D simulattion you need EM simulation and it is quite diffcult 
+
 \end{itemize}
 
 
@@ -384,6 +396,23 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
 
 
 
+
+\textbf{optimzation}
+\begin{itemize}
+    \item to begin optimization from  view menu chose variable browser then mark on optmize foor the varible you want.
+    \item  also there constrain option to define min and max values no need for it now
+    \item after you mark to optimize chose the optimzer goal from the project list 
+    \item then chose the parametr you want control just S11 or S22  or any other measuremet 
+    \item define the value at goal start option
+    \item then define goal type > or < or = 
+    \item then define the bandwifth you want get this value on it on min and max options 
+    \item then you will find a mark on the graph you can move it on the graph and change the optimization goal  by mouse
+    \item repeat the process with other curves then see the other marker on the graph for the other otimizer goal .
+    \item then in simulate menu click optimize 
+    \item on the menu chose Random local for the optimization method 
+    \item Mac iteration means how many times the circuit simulated greater number better result but takes longer  
+
+\end{itemize} 
 
 
 
