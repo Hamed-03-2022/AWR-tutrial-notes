@@ -16,6 +16,9 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 
+\usepackage{float}
+\usepackage{cleveref}
+
 
 \geometry{a4paper, margin=1in}
 
@@ -345,32 +348,28 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
     you will use the stability T junctions  when connect 3 Diffrent Txlines.
 \end{itemize}
 
-
-\textbf{the matching circuit notes}
+\textbf{Matching Circuit Notes}
 \begin{itemize}
-    \textbf{from AWR mtch tutorial}
-    \item ideal Tline is lossles gives perfect phase delay on a spesific frequency and it like on class
-    \item under transmission lines you will fined phase menu then chose Tlin ans Tloc are on the  same menu. these are uesd for the lossles case.
-    \item For the Tline Z0 is the impedence keep it $50 ohm$  and EL is the  electrical length it not the physical length it is the phase delay in degrees that will apply to the signal F0 is the center frequency is very important with EL .
-    \item to simulate the input impednce on Ohms from the linear curves chose zin and only magnitude then make your graph and measure also  from Port 1
-    \item real Zin is the the ohm value  and the img Zin graph show the reactance whin define the capacitance and the inductance if it is negative or positive. this where the matching starts.
-    \item if you mesure the Zin for the Tline with GNd only it will show at the center freq the a huge value at a single freq whic is define an open circuit due to high impedence value.
-    \item if you wanna control a freq on smith juss chose it as the central freq on the Tlines then dee it is point on smith then move it up and sown based on the admittance and impedance plots .  and using resistors not prefiered as it introduce losses .
-    \item when start match with the lumped elements always start with the L netweork of L and C together and then control it notice the higher the capacitance the lower the impedence as $Z=j/\omega C$ 
-    \item after you match on Zin smith graphs  with complex magnitude aou can make S11 graph and see the value at the matched fewq on dB
-    \item the problem with the idal Tlines is no practical they don't consider the loss or juction connections and lots of parasitics 
-    \item to work real Tline need new schematic. 
-    \item reak -tline rotates around the center point by a spesific amount it not like the LC component 
-    \item after you define the MSl ine based on the txline tool from the date also on txline tool prepare the substrate for your measurement.
-    \item to match add series and parrellel tlines and control the length and the width 
-    \item to simulate a t shape Tlines on the layout to check the design before fabricate 
-    when connecting more than a Tlines together with the the T juction make the width  of the jucction sides and the wisth fo the Tlines constant values and jsut change the length
-     the length need to be not longer that 20 mm to save the diementions of the pcb after fabriaction.
-     the juction is called MTEE and there is another one called  $MTEE\$$ this define the widthes automtically if you have Diffrent width Tlines.
-    \item  for the open side Tline  use Mopen lien to close the Tline side.
-    \item  there is a tool called snap together on the above line just mark all tlines on the layout and press it then everything will be connected automaticaly .  the tool beside the tuner tool.
-    \item if you wanna solve for everything on 3D simulattion you need EM simulation and it is quite diffcult 
-
+    \item \textbf{From AWR Matching Tutorial}
+    \item An ideal transmission line (Tline) is lossless and provides a perfect phase delay at a specific frequency, similar to what was discussed in class.
+    \item Under the transmission lines menu, you will find the phase menu, where you can choose `Tlin` and `Tloc` options. These are used for the lossless case.
+    \item For the Tline, \(Z_0\) is the characteristic impedance. Keep it at $50\,\Omega$. EL is the electrical length, which is not the physical length, but the phase delay in degrees that will apply to the signal. \(F_0\) is the center frequency, which is crucial for determining EL.
+    \item To simulate the input impedance in ohms from the linear curves, choose `Zin` and select only the magnitude. Then, generate your graph and measure from Port 1.
+    \item The real part of Zin represents the resistance in ohms, while the imaginary part of Zin shows the reactance, which defines whether the circuit behaves capacitively or inductively (negative or positive reactance). This is where the matching process begins.
+    \item If you measure the Zin for the Tline with only a ground connection, it will show a large value at the center frequency, indicating an open circuit due to the high impedance.
+    \item If you want to control a frequency on the Smith chart, set it as the central frequency on the Tlines, observe its point on the Smith chart, and then move it up and down based on the admittance and impedance plots. Note that using resistors is not preferred, as they introduce losses.
+    \item When starting to match with lumped elements, always begin with the L-network of an inductor (L) and a capacitor (C) together, then adjust it. Notice that increasing the capacitance lowers the impedance since \( Z = \frac{j}{\omega C} \).
+    \item After matching on the Zin Smith charts with a complex magnitude, you can create an S11 graph and observe the value at the matched frequency in dB.
+    \item The problem with ideal Tlines is that they are not practical; they don't account for losses, junction connections, or various parasitics.
+    \item To work with real Tlines, you need a new schematic.
+    \item Real Tlines rotate around the center point by a specific amount, unlike LC components.
+    \item After defining the microstrip line (MSline) based on the Txline tool, prepare the substrate for your measurements using the same tool.
+    \item To achieve matching, add series and parallel Tlines and adjust their length and width.
+    \item Simulate a T-shaped Tline on the layout to check the design before fabrication. When connecting more than one Tline with a T-junction, ensure that the widths of the junction sides and the Tlines are consistent. Only change the length. The length should not exceed 20 mm to maintain the dimensions of the PCB after fabrication.
+    \item The junction is called MTEE, and there is another variant called $MTEE\$$, which automatically adjusts the widths if you have different width Tlines.
+    \item For the open-ended Tline, use `Mopen` to terminate the Tline.
+    \item There is a tool called `Snap Together` on the toolbar. Just select all Tlines on the layout and press it, and everything will be connected automatically. The tool is located next to the `Tuner` tool.
+    \item If you want to solve everything in a 3D simulation, you will need an EM simulation, which is quite difficult.
 \end{itemize}
 
 
@@ -425,13 +424,266 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
 \end{itemize}
 
 
+\textbf{From Microwave Labcast Lecture 9}
+
+\textbf{From Microwave Labcast Lecture 9}
+
+\begin{itemize}
+    \item Oscillating occurs due to Amplifier + Feedback. Some slides from the video are shown in \cref{stability1,stability2}.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 1.png}
+        \caption{Stability Figure 1}
+        \label{stability1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 2.png}
+        \caption{Stability Figure 2}
+        \label{stability2}
+    \end{figure}
+
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 3.png}
+        \caption{Stability Figure 3}
+        \label{stability3}
+    \end{figure}
+
+     
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 4.png}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability3}
+    \end{figure}
+    \item  after the derivation for the Gamma in aout you get this for the C and R  
+    C is the center of complex numbers and R is the radius for the real numbers 
+       
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 5.png}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability5}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 5.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability5}
+    \end{figure}
+   
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 7.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability5}
+    \end{figure}
+
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 8.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability5}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 9.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability5}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability 10.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability5}
+    \end{figure}
+
+
+
+
+\end{itemize}
+
+
 
 
 
 
 \textbf{What to do to design}
 \begin{itemize}
-    \item stability ba K and delta  or SCIR_IJ(1,2) and SCIR_IJ(2,1) on smith to be sure that all circles outside the smith means unconditional stable.
+    \item stability ba K and delta  or SCIR_IJ(1,2) and SCIR_IJ(2,1) on smith to be sure that all circles outside the smith means unconditional stable.the k as on the pdf file on my laptop.
+    
+    stability wit the SCIR1 and SCIR2  for 22 and 11  should the spesified freq circle should be outside the the smith plot.
+    all stability circles should be outside.
+    the shunt resistor takes the circles outside to the open side right side of smith
+    the series resistor takes the circles outside of smith from the left side  or the short circuit side.
+
+
+
+    stability with  MU1 ans MU2  and chose port 22  for the two values for the output stability A
+    also this repeated with thr inpupt match. don't chose a unit leave it normalised .
+     MU > 1 for the stability with MU test.
+     MU is the distance of the closed point of the stability circle to the center of the smith chart
+     if MU < 1  the design will be potentialy Instability.
+
+
+     stability with K>1 and delta <1 I think also the it works for 11 and 22 
+     stabilize the design could reduce the gain also.
+
+
+     for the stability test add to the transistor inpur and output capacitors and the L shocks inductor on the line for the biasing circuit.
+     then amke the stability test
+     define the s parameter simulatioon from the points for the freq range for the transistor 
+     
+     like this circuit on \cref{stability00}
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability00.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability00}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/stability01.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{stability01}
+    \end{figure}
+
+
+    so get the stability points vs the the noise value. add series R at the in and out of the transistor dierctly like the R0 but use higher values.
+
+    avoid any noise components at the lna input which could lead to higher NF so the R0 for the stability could be at the output side only to avoid noise but the resistor the lower the better 
+
+    adding the Vds = Vdd for the bias point fot s2p file and also with  Vgs 
+
+    if the design is slightly stable or there  value is lower than 1 by small value it could be solved during matching this is called potential stable but unconditional stability is preferred this for the unspecfied freq range but for the BW it must be unconditional stable 
+    als using the feedback is food for the stability and the shunt RC line which is on input side this also can improve the stability 
+    but R shunt should be as high as possible for provide a load for the gate of the device the capcitor shuct is blocks the DC from going to the ground throug the resistor 
+    with the stability 
+    in the dc bias line you can use the choke inductor for the low freq on the video it works for  2,4 Ghz so for our design it will also work otherwise you can use the Mlines circuit snd match it to be band pass filter  means has very low S11 and S22 on the BW and zero S21 as a gain and this means no loss on the BW so make the circuit and match it by the way you are interested on it.
+    
+    you can also use the capacitor on range pf beside the bias source as blocker and then use the choke inductor nad the resistor and make you measurement on the design.
+    as mentioned on this graph for the biasing design also the connected radial stub gives double protection to the what happens on the capacitor besif the bias sourse it like a gnd point to protect the circuit. \cref{Bias0}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/Bias0.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{Bias0}
+    \end{figure}
+
+
+
+    on the optimization neever try to change the bias componet means the  L chose stay as it is and the Rd just changet the component on the Rf propagation line.
+
+
+    for the matching at the end to get low S11 and S22  make the matching circuit and make the in and out capactors par to it as you have to use them and shown the figure  beloe \cref{Matching0}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/Matching0.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{Matching0}
+    \end{figure}
+
+    also just change the compont realted to matching just the feedback and the capacitors and the shunt and series coponent on the propagation line this is an example for a matching  circuits for the componet you are allowed to change.as in \cref{Matching1}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/Matching1.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{Matching1}
+    \end{figure}
+
+    after every change make full measurment for the design all sparmeter  mesurment and the noise and the stability also the pdc is stable as you are using stable point for the biasing 
+
+
+the EM simulaton for the layout can be done with s parameters model after you finish the simulation generate  gerber file and fabricate you lna and during EM simulation the amp should be biased with the DC but on the S2p sile it contains the value for the DC point.
+
+for thr p1db point if it should be  higher than 10dbm for example. on the simulaton for the Harmonic balance you sweep pin from -30dbm to 10dbm and mesure the gain vs pin and see where is the 1db compression point. ifit is in on 0dbm check the point also on vout(dBm) on this point and see if it oppose 14dbm for instance it means that out p1db point is on 14dbm  and this means that our design achieve the goal to get p1db > 10dbm 
+
+
+this is on the RF design 10 by Anurag on youtube on min 50 .
+
+for the noise figur from the steer video saved on Brave browser sou see the gain and Nf tunig graph see it and make it for your design. 
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+    
+
+\end{itemize}
+
+\textbf{Anurag RF design 9}
+\begin{itemize}
+    \item some notes about the noise
+    \item LNA Theory & Fundamentals - Quick Review
+
+    What is a Low Noise Amplifier?
+    
+    A low-noise amplifier (LNA) is an electronic amplifier that amplifies a very low-power signal without
+    significantly degrading its signal-to-noise ratio.
+    An amplifier will increase the ower of both the signal and the noise present at its input, but the amplifier will
+    also introduce some additional noise. LNAs are designed to minimize that additional noise.
+    V Designers can minimize additional noise by choosing low-noise components, operating points, and
+    circuit topologies.
+    v Minimizing additional noise must balance with other design goals such as power gain & impedance matching.
+    An LNA is a key component at the front-end of a radio
+receiver circuit to help reduce unwanted noise in particular. In
+most receivers, the overall NF is dominated by the first few
+stages of the RF front end.
+
+By using an LNA close to the signal source, the effect of noise from subsequent stages of the receive chain in
+the circuit is reduced by the signal gain created by the LNA, while the noise created by the LNA itself is injected
+directly into the received signal.
+
+
+The LNA boosts the desired signals' power while adding as little noise and distortion as possible. The work done
+by the LNA enables optimum retrieval of the desired signal in the later stages of the system.
+    
+
+
+
+
+    
+    \item \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/Noise1.pdf}
+        \caption{Stabiliy for transistor and amplifier}
+        \label{Noise1}
+    \end{figure}
+    
+\item  if  you are luky you will find the Nonlinear model of your transistor and if not you will have the S2p file that has noise parameter 
+at the end of the file and mention the bias point and you will not be able to simulate the Nonlinear points p1dB and oip3 
+\item with thr nonlinear model first thinf add biasing for the transistor and get IV curves and check the point you look for it which 
+should give as low as possible power consumption which is defined by Vds * Id 
+if with s parametr you can't so that as you  have s parameter which is extracted at a  particular bias point .
+with s parameter start from the stability point step 2 
+
+
+
 \end{itemize}
 
 With the dielectric function $\epsilon$, which describes the response of the material to external electromagnetic fields. $\epsilon = \epsilon_1 + i \epsilon_2$ is a complex function, which will in general depend strongly on the frequency of $\Vec{E}$ and also on the direction, if the material is anisotropic. The sometimes more intuitive complex refractive index $\Tilde{n}$ can be gained from $\epsilon$ throug \cite{paper_2}:
