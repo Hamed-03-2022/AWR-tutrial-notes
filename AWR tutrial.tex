@@ -514,7 +514,18 @@ VSWr is the ration between $$V_max$$ / $$V_min$$
 
 
 
+\textbf{from sim videos}
+\begin{itemize}
+    \item this some pictures for some tricks used on the video during worrking with Tlines. as shown on fig \cref{simV1}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/SimV1.pdf}
+        \caption{some tricks to write the tlines width and length also to use the tline calculator and update the line automatically also how to meaure the indertion loss and the 
+        the reflection coiffecnt and also the input impedance}
+        \label{simV1}
+    \end{figure}
 
+\end{itemize}
 
 \textbf{What to do to design}
 \begin{itemize}
@@ -611,6 +622,186 @@ for thr p1db point if it should be  higher than 10dbm for example. on the simula
 this is on the RF design 10 by Anurag on youtube on min 50 .
 
 for the noise figur from the steer video saved on Brave browser sou see the gain and Nf tunig graph see it and make it for your design. 
+for the matching the stability is most important than it the  staility controlled mostly by resistors at the imput and the output also the feedback  resistor 
+
+
+the biasing is interested on how much current on Id and the Vgs the mentioned Volt on the datasheet is the Vds and you just apply Vdd so you can control that with the feedback and the Rd you can use just inductors and the current will not changed as it goesout from the source but with thr Rd it might play role the stability and the biasing at the sames time 
+
+
+using ID meter and the VD metr to measure the IV characteristic of the design make sure to use the marker on the graoh that tells you the value of I and V  at each point
+
+
+the capactors beside the biasinf sourse is important for the biasing as it  blocks the dc and force it to go to the  design but it does't change the current a<dn the vlolt inside the circuit 
+
+
+
+now you can start match before checking the gain as mathcing over the spesified BW is modt important than getting the gain. so the blocking capcitors can be part of the match circuit 
+
+smith has a good notes as mentioned on this grapg from Rf design 6 by Anurug \cref{smith tips}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Anurug rf6_1.pdf}
+    \caption{Smit important notes }
+    \label{smith tips}
+\end{figure}
+
+you can make the matching circuit outside the blocking capcitors
+
+start with measure the Zin on smith for a spedifed freq as smith can work in single freq only check the in or the out impedance and match it with a 50ohm or any other soure 
+for example if the inpput of the transistor is 500 ohm and the  sourse port is 50ohm  now you will need to match 
+Zin can be cosidered S11 on complex units this might be agood idea for SNSPDs 
+this for Z11 and Z22 
+
+
+matching between two point is by finidng them in smith and then move one to the other point by the LC circuit this means that the interstage capactor between the two stage LNA 
+may be will no be enough for the matching between the two stages . for example if output of stage 1 is  $10+j*50$  and the  input of the  2nd stage is  $50+100*j$
+so show the two poitns on smith and then move one to the other no need for 50 ohm matching here.
+
+on matching you could add the two shunt or series beside each other but preferred to use one only. this point is important for our design due to the two component at the input amtch side if you don't wanna use a R and C .
+all matching network are simply filters between unequal termenation on each side 
+
+
+\textbf{Broadband matching}
+here we use the q circles method or called the $q factor = center freq / BW $ then you will see a another graph at the middle of smith. as shown on \cref{Anurug rf6_2} 
+
+Q factor is $1$ if the  you wotks on single freq  higher q number means BW lesser and lesser and the circle increas 
+the idea here is to make a smith inside the smith and you are only allowed to move only iside the smaller circle so every time you wanna change the directon you need a new component so the Match circuit will be  many component not just an LC circuit as on the the graph fir 3   \cref{Anurug rf6_2}  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Anurug rf6_2.pdf}
+    \caption{Smit important notes }
+    \label{Anurug rf6_2}
+\end{figure}
+
+
+but the whole circuit now is ideal component with 0 ohm resistance means q factor is very high 
+more BW means More indertion loss or S21  and gain but the large amtching circuit is will add anoide figure on the LNA 
+on the  Power amplifr this might eat he output power if this is the output matching circuit.
+another point is the Broadband mactch will change the load and the source impedence during matching so this needs some tricks to deals with it.means the source and load impedance vary with the freq as you work on BW 
+Impedance mactching importance \cref{Anurug rf6_3}
+snp is also called s2p files. 
+one of smith chart is it works with  only one freq and all other factors will based on it .now you have to use the q factor circle with the center freq ans then dfine the in and out impedance on smith chart and the add the lumped elements to match over the Wideband . 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Anurug rf6_3.pdf}
+    \caption{smith after widebend match the matching is not as good as ecpected as we didn't consider the freq dependeices on the BW }
+    \label{Anurug rf6_3}
+\end{figure}
+ 
+
+the frequency dependeices can be solved after matching with tthe optimization tool as on AWR by define optimization goals.
+on the optimization for the inductance it has L and R , do  you should chose just L and C on the optimization tool no optimization for the R, so the wide band match is done for the Center freq but with the Q factor circuits, then apply optimization to get the best result.
+
+
+\textbf{Match Cascade}
+this is very diffcult to measure the in and out of the two stages sepertly as the are connected and we can only measure the  S11 for the 1st stage and S22 for the 2nd stage,
+and to match we need S11 for the 2nd stage also S22 for the first stage and no port connected for this measure.
+
+threre is a tool called SP probe with 50 ohm match at the two sides the pic define the proces \cref{Anurug rf6_4}
+it has left and write probe L.S11 is S22 for the 1st stage and R.S11 is the S11 for the single stage. for the sp probe you need to define you freq range. also check what other measurment can done with Sp probe as on the fig \cref{Anurug rf6_4}
+this means you have defined a port inside the design 
+also you can use the impedance match tool on ADS it show the types of matching method by filters with LPF, HPF and Band pass filter.also with thr transmission lines 
+and connect the network as on the  figure 
+
+and aslo the match network topologies might be Diffrent. the topologies can be optimized and generated by impedence match utility tool on ADS on lec 7 with Anurag.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Anurug rf6_4.pdf}
+    \caption{smith after widebend match the matching is not as good as ecpected as we didn't consider the freq dependeices on the BW }
+    \label{Anurug rf6_4}
+\end{figure}
+ 
+also after Cascade matching you need opotimization due to the freq dependeices 
+the component that stops during optimization is because it reach the limit of the measur 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbd{Component tolerence}
+\textbf{All the components on the design have a tolerance of  $+ or - \2\%$  more or less }
+this will need monto carlo and yiels analysis  there is a video on the Anurag achannel about that after monto carlo simulation you will  see the S11 for example it might be S22 or other  you woll see many values on one  curve  which represent  $ \5\%$ change between the other curve this percent set up during simulation for the design.as \cref{Anurug rf6_3}
+then after you get this large number of the measuments make the yield analysis or yield optmization to get the central measument.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
