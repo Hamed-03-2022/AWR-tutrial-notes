@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.28)  1 AUG 2024 23:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.28)  4 AUG 2024 01:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex"
-(f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex
+**"f:/Github/AWR-tutrial-notes/AWR tutrial.tex"
+(f:/Github/AWR-tutrial-notes/AWR tutrial.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -544,7 +544,7 @@ Overfull \hbox (47.07068pt too wide) in paragraph at lines 142--142
 \T1/lmr/bx/n/14.4 using-AWR-Microwave-Office-Amplifier-Design-and-Simulation.git) 
  []
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:172: You can't use `macro parameter character #' in horizontal mode.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:172: You can't use `macro parameter character #' in horizontal mode.
 l.172 #
        
 Sorry, but I'm not programmed to handle this case;
@@ -555,7 +555,7 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 
 [4]
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:280: Missing $ inserted.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:280: Missing $ inserted.
 <inserted text> 
                 $
 l.280 ...umbers are written now interms of \Lambda
@@ -563,7 +563,7 @@ l.280 ...umbers are written now interms of \Lambda
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:281: Missing $ inserted.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:281: Missing $ inserted.
 <inserted text> 
                 $
 l.281 
@@ -574,7 +574,7 @@ you left one out. Proceed, with fingers crossed.
 
 
 [5]
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:307: Missing $ inserted.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:307: Missing $ inserted.
 <inserted text> 
                 $
 l.307 from element chose V_
@@ -582,7 +582,7 @@ l.307 from element chose V_
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:310: Missing $ inserted.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:310: Missing $ inserted.
 <inserted text> 
                 $
 l.310 
@@ -600,7 +600,7 @@ Overfull \hbox (292.59883pt too wide) in paragraph at lines 303--310
 [6]
 
 [7]
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:389: You can't use `macro parameter character #' in horizontal mode.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:389: You can't use `macro parameter character #' in horizontal mode.
 l.389 ...ectly means the capacitor are inside it.#
                                                   
 Sorry, but I'm not programmed to handle this case;
@@ -675,7 +675,7 @@ pdfTeX warning: pdflatex (file ./figures/stability 8.pdf): PDF inclusion: multip
 LaTeX Warning: File `figures/stability 10.pdf' not found on input line 504.
 
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:504: Package pdftex.def Error: File `figures/stability 10.pdf' not found: using draft setting.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:504: Package pdftex.def Error: File `figures/stability 10.pdf' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -686,26 +686,34 @@ l.504 ...=0.8\textwidth]{figures/stability 10.pdf}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:521: Missing $ inserted.
+<figures/SimV1.pdf, id=170, 845.04686pt x 597.50786pt>
+File: figures/SimV1.pdf Graphic file (type pdf)
+<use figures/SimV1.pdf>
+Package pdftex.def Info: figures/SimV1.pdf  used on input line 522.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+
+
+[13 <./figures/stability 9.pdf>]
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:532: Missing $ inserted.
 <inserted text> 
                 $
-l.521     \item stability ba K and delta  or SCIR_
+l.532     \item stability ba K and delta  or SCIR_
                                                   IJ(1,2) and SCIR_IJ(2,1) o...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:522: Missing $ inserted.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:533: Missing $ inserted.
 <inserted text> 
                 $
-l.522 
+l.533 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:522: Missing } inserted.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:533: Missing } inserted.
 <inserted text> 
                 }
-l.522 
+l.533 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -714,14 +722,14 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (287.12982pt too wide) in paragraph at lines 521--522
+Overfull \hbox (287.12982pt too wide) in paragraph at lines 532--533
 []\T1/lmr/m/n/10 stability ba K and delta or SCIR$[]\OML/lmm/m/it/10 J\OT1/lmr/m/n/10 (1\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 2)\OML/lmm/m/it/10 andSCIR[]J\OT1/lmr/m/n/10 (2\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 1)\OML/lmm/m/it/10 onsmithtobesurethatallcirclesoutsidethesmithmeansunconditionalstable:thekasonthepdffileonmylaptop:[]$ 
  []
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:522: Extra }, or forgotten \endgroup.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:533: Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.522 
+l.533 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -729,24 +737,116 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-
-
-[13 <./figures/stability 9.pdf>]
-<figures/stability00.pdf, id=187, 833.36337pt x 528.58551pt>
+<figures/stability00.pdf, id=189, 833.36337pt x 528.58551pt>
 File: figures/stability00.pdf Graphic file (type pdf)
 <use figures/stability00.pdf>
-Package pdftex.def Info: figures/stability00.pdf  used on input line 548.
+Package pdftex.def Info: figures/stability00.pdf  used on input line 559.
 (pdftex.def)             Requested size: 362.37569pt x 229.85217pt.
-<figures/stability01.pdf, id=188, 833.36337pt x 528.58551pt>
+<figures/stability01.pdf, id=190, 833.36337pt x 528.58551pt>
 File: figures/stability01.pdf Graphic file (type pdf)
 <use figures/stability01.pdf>
-Package pdftex.def Info: figures/stability01.pdf  used on input line 554.
+Package pdftex.def Info: figures/stability01.pdf  used on input line 565.
 (pdftex.def)             Requested size: 362.37569pt x 229.85217pt.
 
 
-[14 <./figures/stability00.pdf>]
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:587: Misplaced alignment tab character &.
-l.587     \item LNA Theory &
+[14 <./figures/SimV1.pdf>]
+
+[15 <./figures/stability00.pdf> <./figures/stability01.pdf
+
+pdfTeX warning: pdflatex (file ./figures/stability01.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/Bias0.pdf, id=222, 833.36337pt x 528.58551pt>
+File: figures/Bias0.pdf Graphic file (type pdf)
+<use figures/Bias0.pdf>
+Package pdftex.def Info: figures/Bias0.pdf  used on input line 587.
+(pdftex.def)             Requested size: 362.37569pt x 229.85217pt.
+
+
+LaTeX Warning: File `figures/Matching0.pdf' not found on input line 601.
+
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:601: Package pdftex.def Error: File `figures/Matching0.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.601 ...dth=0.8\textwidth]{figures/Matching0.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[16 <./figures/Bias0.pdf>]
+<figures/Matching1.pdf, id=237, 833.36337pt x 528.58551pt>
+File: figures/Matching1.pdf Graphic file (type pdf)
+<use figures/Matching1.pdf>
+Package pdftex.def Info: figures/Matching1.pdf  used on input line 609.
+(pdftex.def)             Requested size: 362.37569pt x 229.85217pt.
+
+
+[17 <./figures/Matching1.pdf>]
+<figures/Anurug rf6_1.pdf, id=250, 845.04686pt x 597.50786pt>
+File: figures/Anurug rf6_1.pdf Graphic file (type pdf)
+<use figures/Anurug rf6_1.pdf>
+Package pdftex.def Info: figures/Anurug rf6_1.pdf  used on input line 643.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+
+
+[18 <./figures/Anurug rf6_1.pdf>]
+<figures/Anurug rf6_2.pdf, id=264, 845.04686pt x 597.50786pt>
+File: figures/Anurug rf6_2.pdf Graphic file (type pdf)
+<use figures/Anurug rf6_2.pdf>
+Package pdftex.def Info: figures/Anurug rf6_2.pdf  used on input line 672.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+<figures/Anurug rf6_3.pdf, id=266, 845.04686pt x 597.50786pt>
+File: figures/Anurug rf6_3.pdf Graphic file (type pdf)
+<use figures/Anurug rf6_3.pdf>
+Package pdftex.def Info: figures/Anurug rf6_3.pdf  used on input line 689.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+
+
+[19{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./figures/Anurug rf6_2.pdf>]
+<figures/Anurug rf6_4.pdf, id=287, 845.04686pt x 597.50786pt>
+File: figures/Anurug rf6_4.pdf Graphic file (type pdf)
+<use figures/Anurug rf6_4.pdf>
+Package pdftex.def Info: figures/Anurug rf6_4.pdf  used on input line 713.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+
+
+[20 <./figures/Anurug rf6_3.pdf>]
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:740: Undefined control sequence.
+l.740 \textbd
+             {Component tolerence}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:741: Undefined control sequence.
+<argument> ...esign have a tolerance of $+ or - \2
+                                                  \%$ more or less 
+l.741 ...lerance of  $+ or - \2\%$  more or less }
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:742: Undefined control sequence.
+l.742 ...lues on one  curve  which represent  $ \5
+                                                  \%$ change between the oth...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:833: Misplaced alignment tab character &.
+l.833     \item LNA Theory &
                              Fundamentals - Quick Review
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -755,8 +855,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-f:/Latex work/NEW/AWR-tutrial-notes/AWR tutrial.tex:597: Misplaced alignment tab character &.
-l.597 ...h other design goals such as power gain &
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:843: Misplaced alignment tab character &.
+l.843 ...h other design goals such as power gain &
                                                    impedance matching.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -765,20 +865,20 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-<figures/Noise1.pdf, id=200, 833.36337pt x 528.58551pt>
+<figures/Noise1.pdf, id=298, 833.36337pt x 528.58551pt>
 File: figures/Noise1.pdf Graphic file (type pdf)
 <use figures/Noise1.pdf>
-Package pdftex.def Info: figures/Noise1.pdf  used on input line 618.
+Package pdftex.def Info: figures/Noise1.pdf  used on input line 864.
 (pdftex.def)             Requested size: 362.37569pt x 229.85217pt.
 
 
-[15 <./figures/stability01.pdf>]
+[21 <./figures/Anurug rf6_4.pdf>]
 
-LaTeX Warning: Citation `paper_2' on page 16 undefined on input line 634.
+LaTeX Warning: Citation `paper_2' on page 22 undefined on input line 880.
 
 (AWR tutrial.bbl)
 
-[16{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./figures/Noise1.pdf>] (AWR tutrial.aux)
+[22 <./figures/Noise1.pdf>] (AWR tutrial.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
@@ -794,17 +894,17 @@ Package rerunfilecheck Info: File `"AWR tutrial".out' has not changed.
 (rerunfilecheck)             Checksum: 33648C2C4981E1C26305BCE7FDBEB436;2007.
  ) 
 Here is how much of TeX's memory you used:
- 14573 strings out of 473904
- 248023 string characters out of 5736415
+ 14682 strings out of 473904
+ 250822 string characters out of 5736415
  1940908 words of memory out of 5000000
- 37197 multiletter control sequences out of 15000+600000
+ 37292 multiletter control sequences out of 15000+600000
  612577 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,804b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,796b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "AWR tutrial.pdf" (16 pages, 8674379 bytes).
+Output written on "AWR tutrial.pdf" (22 pages, 13798394 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 411 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

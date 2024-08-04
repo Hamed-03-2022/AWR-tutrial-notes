@@ -722,6 +722,81 @@ the component that stops during optimization is because it reach the limit of th
 
 
 
+\textbf{Mtching with Tlines}
+tline normal,  is jsut ana LC netweork, default Impedance is 50 ohm , increse the impedence of the line makes it more inductive, or it will behaves like an inductor on smith chart , bbut tline with higher impedence or lower is no avilable practicaly, higher impednce means very thin line, capacitance will be negligable so the tline is an inductor.
+
+
+openstub,  will behaves like a capacito. so if we leave the line on the pcb open it is like a capacitor, for the open stub if we decrase the  impedance it will be more capacitive,means wider tline, 
+
+on the txline calculateot the  higher the impednce the lower line you woll need means smaller W and Length. most of the pcb is 0,2 mm width, W_max is 3 mm but with no upper limit,
+
+
+the input amtch is SMA  sourse and  input for the transistor load  these is the two sides for the input matchso mostly the output of the match circuit should be loaded on the input for the follwer component 
+
+for the tline after you make you design there will be the problem of variable freq with the component during match so we need optimization but for the tlines we optimize the El on not the impedance and the center freq still the same.also you could optimize the resistance but with adding constrain for the values.
+
+during the optimzation you if some component say that it reach the limit defined on the  constrain you can change it and continue the the optimization,
+
+to add the important tools from the device you can define your own hotkeys from the hot key tools bard and fine the needed tools. 
+
+after you work with the tlines which is optimum you need the physical lines with the MSUB  like the lines on the PCB, on ADs there is a method to convert the tlines  to Mline means you add the characteristic of the tline the impedance and El and F0 and then on the lineCalc open your MSUB it will converted to a Mline with length and width, on the line calculate tools use send and update icons tools to modfy the component as on fig \cref{Anurug rf8_0}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Anurug rf8_0.pdf}
+    \caption{Tline to Mlines converter on ADs }
+    \label{Anurug rf8_0}
+\end{figure}
+
+the convertion is  done line by line for all the component, also don't forget to add junctions for the lines connect on T shape , and slo there is junction for lines with Diffrent lengths meand jsut 2 lines nnot 3 as on the T junction form, and alaso there is for connect more that 3 lines on the pcb.
+after changing all the tlines you need also optimzation tools but preferred to make all the parameters values on a equation form to save tthe shape of your design,
+
+on the optimization if youe see a good result you can stop the simulatoin and update yoour  design , 
+
+
+
+
+\texzbf{EM simulation}
+at the beginning generate the layout of the design and by seeing the footprint for all the component, the Mlines has there own footprint, if a component with no footprint add a footprint for it from the software library, 
+if there is dicontinuty on the layout this means there is a mistake on the design lool for the component and correct it then optimzation agian for the design as any chages might make you lose the point of matching, this means that if increased line as opne stub or short might means add a component and this  will lead to mismatch over our point. 
+
+
+then add pins for the input and the output of the design, if you looks for the stackup you will see a 3d view for the Mline and the substrate you prepared is imported ont view so can see all the connection of the design, so for the EM simulation you need the pins and the stackup 
+
+
+for the EM creation is by make the EM setup, chose the EM simulator to use from Momentum Microwave and FEM and Momentum Rf 
+for the  voideo RF 8 by Anurag this by he uses Momentum Microwave , 
+see a tutrial hoe to set it up 
+aou make the EM model and make the co simulatio for the design and circuit representation 
+means after you make simulation for Maching circuit you make the the layout form and then connect the other components models and make the Em ssimulation agian,
+aftr EM simulation you see the same measurment you did for sparmeter simulation
+and check the result does it still the same or not  co simulation is Em simulation and it is imulatiion for the real design.
+
+thef inal layout after simulation means making the final pcb layout draw it and define the size and make the holes and the width of holes, 
+when adding the holes you can make a grid of holes with rows and colomns and then add it to the layout, 
+
+at the EM simulation again after the design is finished make th via holes lumped to not consider it on the simulation which will save the simulation time and memory of the device,
+
+
+then export the gerber file of DXF for GTs fro ADS  chose gerber/drill format then open it after it is exported, 
+gerber file will show the final pcb layers, 
+the gerber file can be changed for the txt editor viewer 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
