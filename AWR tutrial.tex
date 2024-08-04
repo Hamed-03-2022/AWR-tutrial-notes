@@ -786,7 +786,46 @@ the gerber file can be changed for the txt editor viewer
 
 
 
+\textbf{NI AWR manual PCB layout and Gerber + drill file generation}
+gerber files is about a files for every layer alone, you can download it from internet as zip files.
+stackup of the design means the matirials characteristic for every layer. 
+from options chose layout options 
+control the grid spacing 0.5 mm 
+and layout fone  0.8 mm
+from layout default beisde the element tab you can control the layers add new layers like add FCu layer and add also BCu add the layers names as you know it from kiacad 
+after you add the layer open the schematic and then from tools  open layout files then start control the layers you  can draw it or use the footprint for the component used
+after you finish from the layout menu go to the default and chose the export gerber file and modfy the name and save
+then form scripts icon chose layout then  chose  ecport pcb drill gerber 
+you will have a files output then you can open the gerber file on other gerber viewer as gerberview.exe
+after you open it the files on gerber has defined extenstion for every layer you can search online for that 
+so change the files ectention and save it then you can send to a company to fabrication process 
 
+
+
+
+
+
+\textbf{Simulating power}
+change from port properties the power port to souce it will show 0dbm which means 1mW 
+on the figure \cref{power1} you expect two input p2 and p3 is 1mW so p on p1 should be 2 mW 
+on the meaure use PT the total power in dbm or in mW 
+you see less than 2mW 
+on the curve you look on the middle valiue it is 1.8 mW means there is loss or reflections 
+and also if we add 4 sources it show less than 4mW 
+so important point the output port that you take the power from it it will be normal port and the others is sources
+if the results is not accurate on project option you can change the interpolation or passivity  from  linear to interpolation 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/power  ports 1.pdf}
+    \caption{Power measue on AWR schematic and graphs from s parameters}
+    \label{power1}
+\end{figure}
+
+
+
+\textbf{EM structure simulation  and optimization on AWR}
 
 
 
