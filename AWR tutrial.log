@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.28)  4 AUG 2024 01:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.7.28)  5 AUG 2024 09:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -816,8 +816,158 @@ Package pdftex.def Info: figures/Anurug rf6_4.pdf  used on input line 713.
 
 
 [20 <./figures/Anurug rf6_3.pdf>]
-f:/Github/AWR-tutrial-notes/AWR tutrial.tex:740: Undefined control sequence.
-l.740 \textbd
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:731: Missing $ inserted.
+<inserted text> 
+                $
+l.731 ...ngth. most of the pcb is 0,2 mm width, W_
+                                                  max is 3 mm but with no up...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:732: Missing $ inserted.
+<inserted text> 
+                $
+l.732 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:732: Missing } inserted.
+<inserted text> 
+                }
+l.732 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:732: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.732 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+<figures/Anurug rf8_0.pdf, id=298, 845.04686pt x 597.50786pt>
+File: figures/Anurug rf8_0.pdf Graphic file (type pdf)
+<use figures/Anurug rf8_0.pdf>
+Package pdftex.def Info: figures/Anurug rf8_0.pdf  used on input line 746.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+
+
+[21 <./figures/Anurug rf6_4.pdf>]
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:759: Undefined control sequence.
+l.759 \texzbf
+             {EM simulation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+
+[22 <./figures/Anurug rf8_0.pdf>]
+
+LaTeX Warning: File `figures/power ports 1.pdf' not found on input line 821.
+
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:821: Package pdftex.def Error: File `figures/power ports 1.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.821 ....8\textwidth]{figures/power  ports 1.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[23]
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:841: Missing $ inserted.
+<inserted text> 
+                $
+l.841 then from options_
+                        then layout options  on snap together part make it a...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:843: Missing $ inserted.
+<inserted text> 
+                $
+l.843 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:843: Missing } inserted.
+<inserted text> 
+                }
+l.843 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (574.84244pt too wide) in paragraph at lines 841--843
+[]\T1/lmr/m/n/10 then from options$[]\OML/lmm/m/it/10 henlayoutoptionsonsnaptogetherpartmakeitautosnaponaprmaterchangesshownfig: []\OT1/lmr/m/n/10 23[]\OML/lmm/m/it/10 thengopacktotheextractblockontheschematicrightclickthenchoseaddextractionthsiwillallfileonEMstuctureonprojectleftmenu:[]$ 
+ []
+
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:843: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.843 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+<figures/Em1.pdf, id=331, 845.04686pt x 597.50786pt>
+File: figures/Em1.pdf Graphic file (type pdf)
+<use figures/Em1.pdf>
+Package pdftex.def Info: figures/Em1.pdf  used on input line 853.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+<figures/Em2.pdf, id=333, 845.04686pt x 597.50786pt>
+File: figures/Em2.pdf Graphic file (type pdf)
+<use figures/Em2.pdf>
+Package pdftex.def Info: figures/Em2.pdf  used on input line 868.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+
+
+[24 <./figures/Em1.pdf>]
+<figures/Em3.pdf, id=355, 845.04686pt x 597.50786pt>
+File: figures/Em3.pdf Graphic file (type pdf)
+<use figures/Em3.pdf>
+Package pdftex.def Info: figures/Em3.pdf  used on input line 883.
+(pdftex.def)             Requested size: 362.37569pt x 256.22134pt.
+
+
+LaTeX Warning: Reference `Em4' on page 1 undefined on input line 890.
+
+
+LaTeX Warning: Reference `Em4' on page 1 undefined on input line 891.
+
+
+
+[25 <./figures/Em2.pdf> <./figures/Em3.pdf
+
+pdfTeX warning: pdflatex (file ./figures/Em3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:954: Undefined control sequence.
+l.954 \textbd
              {Component tolerence}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -825,10 +975,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-f:/Github/AWR-tutrial-notes/AWR tutrial.tex:741: Undefined control sequence.
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:955: Undefined control sequence.
 <argument> ...esign have a tolerance of $+ or - \2
                                                   \%$ more or less 
-l.741 ...lerance of  $+ or - \2\%$  more or less }
+l.955 ...lerance of  $+ or - \2\%$  more or less }
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -836,8 +986,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-f:/Github/AWR-tutrial-notes/AWR tutrial.tex:742: Undefined control sequence.
-l.742 ...lues on one  curve  which represent  $ \5
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:956: Undefined control sequence.
+l.956 ...lues on one  curve  which represent  $ \5
                                                   \%$ change between the oth...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -845,9 +995,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-f:/Github/AWR-tutrial-notes/AWR tutrial.tex:833: Misplaced alignment tab character &.
-l.833     \item LNA Theory &
-                             Fundamentals - Quick Review
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:1047: Misplaced alignment tab character &.
+l.1047     \item LNA Theory &
+                              Fundamentals - Quick Review
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -855,8 +1005,11 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-f:/Github/AWR-tutrial-notes/AWR tutrial.tex:843: Misplaced alignment tab character &.
-l.843 ...h other design goals such as power gain &
+
+
+[26]
+f:/Github/AWR-tutrial-notes/AWR tutrial.tex:1057: Misplaced alignment tab character &.
+l.1057 ... other design goals such as power gain &
                                                    impedance matching.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -865,20 +1018,19 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-<figures/Noise1.pdf, id=298, 833.36337pt x 528.58551pt>
+<figures/Noise1.pdf, id=382, 833.36337pt x 528.58551pt>
 File: figures/Noise1.pdf Graphic file (type pdf)
 <use figures/Noise1.pdf>
-Package pdftex.def Info: figures/Noise1.pdf  used on input line 864.
+Package pdftex.def Info: figures/Noise1.pdf  used on input line 1078.
 (pdftex.def)             Requested size: 362.37569pt x 229.85217pt.
 
+LaTeX Warning: Citation `paper_2' on page 27 undefined on input line 1094.
 
-[21 <./figures/Anurug rf6_4.pdf>]
 
-LaTeX Warning: Citation `paper_2' on page 22 undefined on input line 880.
 
-(AWR tutrial.bbl)
+[27 <./figures/Noise1.pdf>] (AWR tutrial.bbl)
 
-[22 <./figures/Noise1.pdf>] (AWR tutrial.aux)
+[28] (AWR tutrial.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
@@ -894,17 +1046,17 @@ Package rerunfilecheck Info: File `"AWR tutrial".out' has not changed.
 (rerunfilecheck)             Checksum: 33648C2C4981E1C26305BCE7FDBEB436;2007.
  ) 
 Here is how much of TeX's memory you used:
- 14682 strings out of 473904
- 250822 string characters out of 5736415
+ 14762 strings out of 473904
+ 252883 string characters out of 5736415
  1940908 words of memory out of 5000000
- 37292 multiletter control sequences out of 15000+600000
+ 37361 multiletter control sequences out of 15000+600000
  612577 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,7n,79p,796b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "AWR tutrial.pdf" (22 pages, 13798394 bytes).
+Output written on "AWR tutrial.pdf" (28 pages, 16960783 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 487 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

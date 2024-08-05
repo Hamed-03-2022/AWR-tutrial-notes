@@ -827,6 +827,110 @@ if the results is not accurate on project option you can change the interpolatio
 
 \textbf{EM structure simulation  and optimization on AWR}
 
+after optimization on the awr from scripts create stackup this should be  done during the schematic window is active
+after you pres create stackup 
+make the gird 0.1 inch  then change the layer 2 matirials to MT from EM layer mappinng after press on the stackup.
+and the line type to MT on the defaults after adding line 1 and remove it after you make the changes.
+
+then enables EM extraction from the  from clik right after chossing with shift key all the component without the port 
+then right click properties then Model extraction enable it by check mark.
+
+
+then go to the layout from the edit button above click select all the snap together 
+
+then from options_then layout options  on snap together part make it auto snap on aprmater changes shown \cref{Em1}
+then go pack to the extract block on the schematic right click then chose add extraction thsi will all file on EM stucture  on project left menu .
+
+after you create EM ectraction on the layout window there woll be uppper right icon called show 2d map 
+this after click show the layout with the squares inside it. for me it doesn'T change may I did somthing wrong.
+
+if you want simulate the em extraction on the block shown on the schematic press on it all the component will  change to red.
+
+then press simulate, this will  take 5 mints at least tot give the results 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Em1.pdf}
+    \caption{Power measue on AWR schematic and graphs from s parameters}
+    \label{Em1}
+\end{figure}
+
+the EM structure simulaiton is called the structure with the closed form models and if the schematic is the same as the EM structure means the simulation is nice.
+
+after the EM simulation make the optimzation again but now change the iteration to low number to prevent long simulation and also the simulation method can be changed.
+
+\textbf{another EM tutorial}
+on the global defining make a stackup from the substrates on element.
+
+on \cref{Em2} follow the picture to make the design of a stackup manulay on the schematic on global definetion make it and from the properties make these changes.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Em2.pdf}
+    \caption{Power measue on AWR schematic and graphs from s parameters}
+    \label{Em2}
+\end{figure}
+
+
+then click make new EM structure and chose the simulator as on the \cref{Em3} make new EM structure 
+on the EM sturcture check the properties before foolow the video (Basics of setting up and running an EM simulation (AXIEM) in Microwave Office
+) to make the setup . then draw rectangle to make a layout, it like drawing the layers of the design. but you have just one layer not many layers as on the pcb.
+add ports to the layout  from the icon bedife view 2d layer map icon. 
+for the ports make the connect to lower option on the properties. for the two ports, 
+the enclosure option slo control the grid size from it. 
+the size of the grid controlled from the enclosure tap this also affect the time of simulation fo we need larger size to save the device. memory. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Em3.pdf}
+    \caption{Power measue on AWR schematic and graphs from s parameters}
+    \label{Em3}
+\end{figure}
+
+
+from the added ports make the s parameters simulation and mesure db s11 and s21 to make the fileter, 
+to check the  current simulation  AFS option as on the figure \cref{Em4} turn it off as it means it will not  simulate every freq we sweep as on the project options.
+the current mesurment and it run 3d view is on  te \cref{Em4}  picture my design didn't works as the ports not added correctly to see the simulation follow the video . 
+Em sturcture dealing with current is very prictiges and show nice graphs.
+
+
+\textbf{EM simulation}
+\begin{itemize}
+    \item aftr you finsh the design and the simulation from scripts- EM - create stackup 
+    \item stackup is a multi layer substrate definations based on the substrate we use .it create the substrate definations for EM simulation  
+    \item open it properties and any chages on stackup will now  change the design it just will be considered on the EM simulation, 
+    \item Etract tool this connect our design to the EM simulation 
+    \item AXIEM simulator chosen on the extraction tools, whixh make the design red color when start eM simulation 
+    \item the EM simulation is for the layout of the design which is formed from cells the size of the cell controlled for the extraction tool and also it define the number of cells on the design which affect the simulation time. smller cell size more accurate simulation 
+    \item  from the element option enable the model option that is used on eM simulation. ths after you sellect  all component you wanna simulate when this model is enabled this mean that the componet are connect with the extraction tool if you click it all the component will be red.
+    \item on the extraction tool if right click then add extraction it will show us a design like the layout design 
+    \item when the layout open mmake snap together then make add  em extraction it will show nice layout design open the layout and make the matirials coppet this step also can be done from the stackup tools on the matirials option then press add extraction again after you add the a matirials 
+    \item the on the layout window press show 2d map it will show the cells of the layout 
+    \item if it is very large the simulation time will be very long 
+    \item then press simulate and on the graph use the source called design name EM 
+    \item then see the difference between EM and normal simulation.
+    \item on layout option from options on the upper  toolbar  make snap together sone automatically when make any changes on the circuit as if it is not the extraction model will change if you chages any coomponent parameter.
+    \item after any changes on the design update the model from add extraction.
+    \item then resimulate the design 
+    
+\end{itemize}
+
+
+\textbf{Txline tool}
+on the  values chane the dielectric const and the conductor to copper and the dielectric to air and the loss tangent 0.0019 
+then on the electrical characteristic change the operating freq and the electrical length. 
+on the physical side change the hight based on the datasheet of the microstrip line that you will use. 
+also the thickness of the pcb 
+on Microwave office add a microstrip to the design and anf the lines you want work with it. 
+cand the MSUB values based on the txline calcuation 
+to check plot S11 and change the unit to measure the angle not dB and see the point ofthe center freq defined on the txline. 
+it should be the same. 
+
+
+
+\textbf{Transient analysis}
+all the component has the small dash beside it it show the dierction of current this shown on the video for Moffice transient by Aaron Scher.and also the setup and the graphs setup is on the video
+
+
+
 
 
 
